@@ -1,0 +1,50 @@
+body {
+	background-color: #26343F;
+}
+
+.main {
+	background-size: 100%;
+	background-repeat: repeat-x;
+	background: linear-gradient(to top right, rgba(29, 54, 73, 1), rgba(45, 63, 74, 0.98))
+}
+
+.logo {
+	font-size:16px;
+	color: white;
+	font-family: sans-serif;
+	margin-top:12px;
+	padding-left:10px;
+	margin-bottom:15px;
+	display:inline-block;
+}
+
+.title {
+	font-size:48px;
+	color: white;
+	font-family: sans-serif;
+	margin-top:50px;
+	padding-left:90px;
+	margin-bottom:0px;
+	display:inline-block;
+}
+
+.sub-title {
+	font-size:24px;
+	color: #41D6C3;
+	font-family: sans-serif;
+	margin-top:10px;
+	padding-left:90px;
+	margin-bottom:0px;
+	display:block;
+}
+
+/*
+svg {
+	opacity: 0.6;
+	transition: opacity 0.25s ease-in-out;
+}
+svg:hover {
+	opacity: 1.0;
+	transition: opacity 0.25s ease-in-out;
+}
+*/

@@ -1,0 +1,14 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"description": "A sample nodejs app for Bluemix",
+	"dependencies": {
+		"twitter": "1.2.5",
+		"watson-developer-cloud": "~1.0.6",
+		"express": "3.4.7"
+	},
+	"engines": {
+		"node": "0.10.*"
+	},
+	"repository": {}
+}
