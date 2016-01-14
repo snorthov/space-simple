@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on 81368e494418a190251949ff91fe21e0c44b455a
 ---
 declared-services:
   tone-analyzer-service-experimental:
@@ -13,3 +14,14 @@ applications:
   env:
     NODE_ENV: production
   host: guys-in-space
+=======
+applications:
+- disk_quota: 1024M
+  host: space-simple
+  name: space-simpele
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+>>>>>>> 128c521 Simple guys in space app

@@ -3,8 +3,11 @@
 	"version": "0.0.1",
 	"description": "A sample nodejs app for Bluemix",
 	"dependencies": {
+<<<<<<< Upstream, based on 81368e494418a190251949ff91fe21e0c44b455a
 		"twitter": "1.2.5",
 		"watson-developer-cloud": "~1.0.6",
+=======
+>>>>>>> 128c521 Simple guys in space app
 		"express": "3.4.7"
 	},
 	"engines": {

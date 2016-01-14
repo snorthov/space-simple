@@ -3,11 +3,14 @@
 	"people": [
 		{
 			"craft": "ISS",
+<<<<<<< Upstream, based on 81368e494418a190251949ff91fe21e0c44b455a
 			"name": "Donald Trump",
 			"twitter": "@realDonaldTrump"
 		},
 		{
 			"craft": "ISS",
+=======
+>>>>>>> 128c521 Simple guys in space app
 			"name": "Mikhail Kornienko",
 			"twitter": ""
 		},
