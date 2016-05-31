@@ -29,10 +29,10 @@ function showAstros(astros) {
 	node.innerHTML = result;
 }
 
-function params(params) {
-	if (!params) params = {};
-	return "?" + Object.keys(params || "").map(function(key){
-		return key+"="+encodeURIComponent(params[key]);
+function params(args) {
+	if (!args) args = {};
+	return "?" + Object.keys(args || "").map(function(key){
+		return key+"="+encodeURIComponent(args[key]);
 	}).join("&");
 }
 
