@@ -1,12 +1,8 @@
 {
-	"name": "NodejsStarterApp",
+	"name": "space-simple",
 	"version": "0.0.1",
-	"description": "A sample nodejs app for Bluemix",
+	"description": "Who is in space right now?",
 	"dependencies": {
-		"express": "3.4.7"
-	},
-	"engines": {
-		"node": "0.10.*"
-	},
-	"repository": {}
+		"express": "latest"
+	}
 }

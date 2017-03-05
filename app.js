@@ -40,7 +40,6 @@ app.get(GET_ASTROS + "2", function (req, res) {
 	});
 });
 
-
 // listen for requests on the host at a port
 var host = process.env.VCAP_APP_HOST || 'localhost';
 var port = process.env.VCAP_APP_PORT || 3000;
