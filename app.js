@@ -4,14 +4,27 @@ var GET_ASTROS = "/astros";
 var ASTROS_JSON = "public/data/astros.json";
 
 var fs = require('fs');
+var http = require('http');
 var express = require('express');
 var app = express();
 
 // Serve static content from /public
 app.use('/', express.static(__dirname + "/public"));
 
-// GET the people in space
-app.get(GET_ASTROS, function (req, res) {
+app.get(GET_ASTROS, /* @callback */ function(req, resp) {
+	http.get("http://api.open-notify.org/astros.json", function(resp2) {
+		var body = "";
+		resp2.on("data", function(d) {
+			body += d;
+		});
+		resp2.on("end", function() {
+			resp.send(JSON.parse(body));
+		});
+	});
+});
+
+// GET the people in space (unused)
+app.get(GET_ASTROS + "1", function (req, res) {
 	res.sendfile(ASTROS_JSON);
 });
 
@@ -27,12 +40,6 @@ app.get(GET_ASTROS + "2", function (req, res) {
 	});
 });
 
-/*
-// GET the people the contents of a file (unused)
-app.get('/', function (req, res) {
-	res.sendfile('public/index.html');
-});
-*/
 
 // listen for requests on the host at a port
 var host = process.env.VCAP_APP_HOST || 'localhost';
