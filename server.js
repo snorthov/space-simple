@@ -35,7 +35,6 @@ app.get(GET_ASTROS + suffix(count++), /* @callback */ function (req, res) {
 	res.sendfile(ASTROS_JSON);
 });
 
-
 // GET the people in space from a file (v2)
 app.get(GET_ASTROS + suffix(count++), /* @callback */ function (req, res) {
 	fs.readFile(ASTROS_JSON, "utf8", function (err, data) {
@@ -49,7 +48,8 @@ app.get(GET_ASTROS + suffix(count++), /* @callback */ function (req, res) {
 });
 
 // listen for requests on the host at a port
-var port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
+var port = process.env.VCAP_APP_PORT || process.env.PORT || process.env.port || 3000;
 app.listen(port, function() {
 	console.log('Server running on port: %d', port);
 });
+
