@@ -2,7 +2,7 @@
 
 var ROOT= location.protocol + "//" + location.host;
 var GET_ASTROS = ROOT + "/astros";
-var ASTRO_ID = "astros";
+var CONTENTS_ID = "contents";
 
 function main() {
 	//startTimer();
@@ -14,7 +14,7 @@ function mouseDown(event) {
 }
 
 function showAstros(astros) {
-	var node = document.getElementById(ASTRO_ID);
+	var node = document.getElementById(CONTENTS_ID);
 	if (!node) return;
 	var result = "", cy= 40, y = 43;
 	for (var i=0; i<astros.people.length; i++) {
