@@ -1,8 +1,11 @@
 {
-	"name": "space-simple",
-	"version": "0.0.1",
-	"description": "Who is in space right now?",
-	"dependencies": {
-		"express": "latest"
-	}
+    "name": "space-simple",
+    "version": "0.0.1",
+    "description": "Who is in space right now?",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "latest"
+    }
 }
