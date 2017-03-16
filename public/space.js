@@ -5,62 +5,47 @@ var GET_ASTROS = ROOT + "/astros";
 var CONTENTS_ID = "contents";
 
 function main() {
-	//startTimer();
-	update();
-}
-
-function mouseDown(event) {
-	alert ("mouseDown");
-}
-
-function showAstros(astros) {
-	var node = document.getElementById(CONTENTS_ID);
-	if (!node) return;
-	var result = "", cy= 40, y = 43;
-	for (var i=0; i<astros.people.length; i++) {
-		var astro = astros.people[i];
-		var name = astro.name, craft = astro.craft;
-		var icon = "<circle cx='100' cy='" + cy + "'' r='10' stroke='gray' stroke-width='3' fill='#D63900'>" + "</circle>";
-		var person =  "<text x='120' y='" + y + "' fill='white' font-family='sans-serif' font-size='14'>" + name + " (" + craft +")" + "</text>";
-		result += icon + person;
-		cy += 30;
-		y += 30;
-	}
-	node.innerHTML = result;
+	getAstros ();
 }
 
 function params(args) {
-	if (!args) args = {};
-	return "?" + Object.keys(args || "").map(function(key){
-		return key+"="+encodeURIComponent(args[key]);
+	if (!args) return "";
+	return "?" + Object.keys(args || "").map(function(key) {
+		return key + "="+  encodeURIComponent(args[key]);
 	}).join("&");
 }
 
-function update () {
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", GET_ASTROS + params({}), true);
-	xhr.responseType = "json";
-	xhr.onload = function() {
-		// success
-		if (xhr.status === 200) {
-			showAstros(xhr.response);
+function astroString(astro) {
+	var string = astro.name + " (" + astro.craft +")";
+	return string;
+}
+
+//TODO - refactor this function ... or maybe not ... how ugly is this code?
+function getAstros(args) {
+	var url = GET_ASTROS + params(args);
+	var http = new XMLHttpRequest();
+	http.open("GET", url);
+	http.responseType = "json";
+	http.onload = function() {
+		if (http.status === 200) {
+			var astros = http.response;
+			var people = astros.people || [];
+			var string = "";
+			for (var i=0; i<people.length; i++) {
+				string += "<div class='item'>";
+				string +=
+					"<div class='circle none' id='" + people[i].name + "-circle'></div>" +
+					"<div class='text' id='" + people[i].name + "-text'>" + astroString(people[i]) + "</div>";
+				string += "</div>";
+			}
+			var node = document.getElementById(CONTENTS_ID);
+			if (node) node.innerHTML = string;
+			return;
 		}
+		console.log(http.response);
 	};
-	xhr.onerror = function() {
-		// fail
-		//TODO - handle errors
+	http.onerror = function() {
+		console.log(http.response);
 	};
-	xhr.send();
-}
-
-var timer;
-function startTimer () {
-	if (timer) clearInterval(timer);
-	timer = setInterval(function() {
-		update();
-	}, 1000);
-}
-
-function stopTimer() {
-	if (timer) clearInterval(timer);
+	http.send();
 }

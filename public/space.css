@@ -29,16 +29,32 @@ body {
 
 .contents {
 	transform-origin: 0 0;
-	transform: scale(1, 1);
+	transform: scale(1.7, 1.7);
+	padding-top:20px;
+	padding-left:80px;
 }
 
-/*
-svg {
-	opacity: 0.6;
-	transition: opacity 0.25s ease-in-out;
+.item {
+	padding:5px;
 }
-svg:hover {
-	opacity: 1.0;
-	transition: opacity 0.25s ease-in-out;
+		
+.circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 3px solid gray;
+  	display: inline-block;
+   	vertical-align: middle;
 }
-*/
+
+.text {
+	color: white;
+	font-family: sans-serif;
+  	display: inline-block;
+   	vertical-align: middle;
+   	padding-left: 4px;
+}
+
+.none {
+	background: blue;
+}
