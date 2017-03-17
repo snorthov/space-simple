@@ -1,35 +1,29 @@
 {
+	"people": [{
+		"craft": "ISS",
+		"name": "Sergey Rizhikov",
+		"twitter": ""
+	}, {
+		"craft": "ISS",
+		"name": "Andrey Borisenko",
+		"twitter": ""
+	}, {
+		"craft": "ISS",
+		"name": "Shane Kimbrough",
+		"twitter": "@astro_kimbrough"
+	}, {
+		"craft": "ISS",
+		"name": "Oleg Novitskiy",
+		"twitter": ""
+	}, {
+		"craft": "ISS",
+		"name": "Thomas Pesquet",
+		"twitter": "@Thom_astro"
+	}, {
+		"craft": "ISS",
+		"name": "Peggy Whitson",
+		"twitter": "@AstroPeggy"
+	}],
 	"message": "success",
-	"people": [
-		{
-			"craft": "ISS",
-			"name": "Mikhail Kornienko",
-			"twitter": ""
-		},
-		{
-			"craft": "ISS",
-			"name": "Scott Kelly",
-			"twitter": "@StationCDRKelly"
-		},
-		{
-			"craft": "ISS",
-			"name": "Sergey Volkov",
-			"twitter": "@Volkov_ISS"
-		},
-		{
-			"craft": "ISS",
-			"name": "Yuri Malenchenko",
-			"twitter": ""
-		},
-		{
-			"craft": "ISS",
-			"name": "Timothy Kopra",
-			"twitter": "@astro_tim"
-		},
-		{
-			"craft": "ISS",
-			"name": "Timothy Peake",
-			"twitter": "@astro_timpeake"
-		}
-	]
+	"number": 6
 }
