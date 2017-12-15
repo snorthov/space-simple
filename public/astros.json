@@ -1,25 +1,14 @@
 {
-	"number": 5,
-	"people": [{
-		"craft": "ISS",
-		"name": "Oleg Novitskiy",
-		"twitter": ""
-	}, {
-		"craft": "ISS",
-		"name": "Thomas Pesquet",
-		"twitter": "@Thom_astro"
-	}, {
-		"craft": "ISS",
-		"name": "Peggy Whitson",
-		"twitter": "@AstroPeggy"
-	}, {
-		"craft": "ISS",
-		"name": "Fyodor Yurchikhin",
-		"twitter": ""
-	}, {
-		"craft": "ISS",
-		"name": "Jack Fischer",
-		"twitter": "@Astro2fish"
-	}],
-	"message": "success"
+    "people": [{
+        "craft": "ISS",
+        "name": "Alexander Misurkin"
+    }, {
+        "craft": "ISS",
+        "name": "Mark Vande Hei"
+    }, {
+        "craft": "ISS",
+        "name": "Joe Acaba"
+    }],
+    "number": 3,
+    "message": "success"
 }
